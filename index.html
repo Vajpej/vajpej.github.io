@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OMSI 2 Repaints Repository</title>
+  <style>
+    /* RESET I ZMIENNE */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg-color: #121214;
+      --card-bg: #1a1a1e;
+      --text-main: #f0f0f5;
+      --text-muted: #a0a0b0;
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --border-color: #2e2e38;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding-bottom: 60px;
+    }
+
+    /* NAGŁÓWEK STRONY */
+    header {
+      background: linear-gradient(180deg, #18181c 0%, var(--bg-color) 100%);
+      text-align: center;
+      padding: 60px 20px 40px 20px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    header p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* GŁÓWNA SIATKA Z MALOWANIAMI */
+    container {
+      display: block;
+      max-width: 1200px;
+      margin: 40px auto 0 auto;
+      padding: 0 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 25px;
+    }
+
+    /* KARTA MALOWANIA */
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background-color: #2a2a30;
+    }
+
+    .card-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .card-tag {
+      display: inline-block;
+      background-color: #2b2d38;
+      color: #93c5fd;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 20px;
+      width: fit-content;
+      margin-bottom: 12px;
+    }
+
+    .card-description {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    /* PRZYCISK POBIERANIA */
+    .btn-download {
+      display: block;
+      text-align: center;
+      background-color: var(--accent);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 10px 16px;
+      border-radius: 8px;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-download:hover {
+      background-color: var(--accent-hover);
+    }
+
+    /* STOPKA */
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>OMSI 2 Repaints Repo</h1>
+    <p>Kolekcja darmowych malowań i repaintedów do autobusu w OMSI 2.</p>
+  </header>
+
+  <container>
+    <div class="grid">
+
+      <!-- PRZYKŁADOWE MALOWANIE 1 -->
+      <div class="card">
+        <img src="https://via.placeholder.com/600x400/2a2a30/ffffff?text=Podgląd+Malowania+1" alt="MAN Lion's City MPK">
+        <div class="card-body">
+          <span class="card-tag">MAN Lion's City</span>
+          <h2 class="card-title">MPK Kraków #BU801</h2>
+          <p class="card-description">Malowanie zaktualizowane o nowe logotypy i detale wnętrza. Zgodne z wersją 1.2 pojazdu.</p>
+          <a href="https://github.com/TWÓJ_NICK/NAZWA_REPO/releases/download/v1.0/MAN_MPK_Krakow.zip" class="btn-download" target="_blank">Pobierz (.zip)</a>
+        </div>
+      </div>
+
+      <!-- PRZYKŁADOWE MALOWANIE 2 -->
+      <div class="card">
+        <img src="https://via.placeholder.com/600x400/2a2a30/ffffff?text=Podgląd+Malowania+2" alt="Solaris Urbino ZTM">
+        <div class="card-body">
+          <span class="card-tag">Solaris Urbino 12</span>
+          <h2 class="card-title">ZTM Warszawa (MZA)</h2>
+          <p class="card-description">Odwzorowanie malowania warszawskiego MZA wraz z dedykowanymi setvarami.</p>
+          <a href="https://github.com/TWÓJ_NICK/NAZWA_REPO/releases/download/v1.0/Solaris_ZTM_Warszawa.zip" class="btn-download" target="_blank">Pobierz (.zip)</a>
+        </div>
+      </div>
+
+    </div>
+  </container>
+
+  <footer>
+    <p>Stworzone dla społeczności OMSI 2 • Znajdziesz mnie na <a href="https://github.com/TWÓJ_NICK" target="_blank">GitHubie</a></p>
+  </footer>
+
+</body>
+</html>
