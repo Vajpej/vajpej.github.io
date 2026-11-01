@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OMSI 2 - Repainty i Dodatki od Vajpeja</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg-color: #121214;
+      --card-bg: #1a1a1e;
+      --text-main: #f0f0f5;
+      --text-muted: #a0a0b0;
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --border-color: #2e2e38;
+      --tag-bg: #2b2d38;
+      --tag-text: #93c5fd;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding-bottom: 60px;
+    }
+
+    header {
+      background: linear-gradient(180deg, #18181c 0%, var(--bg-color) 100%);
+      text-align: center;
+      padding: 50px 20px 30px 20px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .back-link {
+      display: inline-block;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    header p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto 0 auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 25px;
+      margin-bottom: 50px;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background-color: #2a2a30;
+    }
+
+    .card-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .card-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .card-tag {
+      background-color: var(--tag-bg);
+      color: var(--tag-text);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 20px;
+    }
+
+    .card-description {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .btn-download {
+      display: block;
+      text-align: center;
+      background-color: var(--accent);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 10px 16px;
+      border-radius: 8px;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-download:hover {
+      background-color: var(--accent-hover);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="./" class="back-link">← Powrót do strony głównej</a>
+    <h1>OMSI 2 - Dodatki & Malowania</h1>
+    <p>Baza moich autorskich modyfikacji, repaintingów oraz różnorodnych dodatków do OMSI 2.</p>
+  </header>
+
+  <div class="container">
+
+    <h2 class="section-title">🎨 Malowania (Repainty)</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/600x400/2a2a30/ffffff?text=Podgląd+Malowania" alt="Podgląd">
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag">MAN Lion's City</span>
+            <span class="card-tag">MPK Kraków</span>
+          </div>
+          <h3 class="card-title">MPK Kraków #BU801</h3>
+          <p class="card-description">Odwzorowane malowanie ze szczegółami wnętrza i realistycznymi naklejkami.</p>
+          <a href="#" class="btn-download" target="_blank">Pobierz (.zip)</a>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-title">⚙️ Modyfikacje & Inne Dodatki</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/600x400/2a2a30/ffffff?text=Podgląd+Dodatku" alt="Podgląd Modyfikacji">
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="card-tag">Mod dźwiękowy</span>
+            <span class="card-tag">Skrypty</span>
+          </div>
+          <h3 class="card-title">Paczka Dźwięków / Mod Setvarów</h3>
+          <p class="card-description">Modyfikacja zmieniająca dźwięki silnika/drzwi lub dodająca nowe opcje konfiguracyjne do autobusów.</p>
+          <a href="#" class="btn-download" target="_blank">Pobierz (.zip)</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© Vajpej • Modyfikacje i dodatki do OMSI 2</p>
+  </footer>
+
+</body>
+</html>
